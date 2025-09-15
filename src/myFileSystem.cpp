@@ -12,6 +12,7 @@ bool initLittleFS(){
 bool writeLittleFS() {
     File f = LittleFS.open("/myWiFi.txt", FILE_WRITE);
     f.println("SSID");
+    f.println("PASSWORD");
     f.close();
 }
 
