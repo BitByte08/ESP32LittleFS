@@ -61,7 +61,7 @@ void CaptivePortal::startAPMode() {
     Serial.print("AP IP address: ");
     Serial.println(IP);
     Serial.println("=== WiFi Setup Instructions ===");
-    Serial.println("1. Connect to 'ESP32S3 WiFi Setup' network");
+    Serial.println("1. Connect to 'ESP32S3-250922' network");
     Serial.println("2. Open browser and go to: http://192.168.4.1");
     Serial.println("3. Enter your WiFi credentials");
     Serial.println("================================");
