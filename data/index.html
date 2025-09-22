@@ -1,0 +1,115 @@
+기본 콘텐츠로 건너뛰기
+Google 클래스룸클래스룸
+2-3(2025) 임베디드 리눅스 프로그래밍
+홈
+Calendar
+등록한 수업
+미완료 과제
+2
+2025 BSSM 여름 방학 과제(영어)
+2
+2학년 임베디드SW과 운영체제
+2
+2-3 방과후 정처산기
+2
+2학년 방과후 백엔드 기초(유근찬쌤)
+2
+25학년도 체육 (2-3)
+2
+2025 2-3 진로
+한
+한국사(2-3반)
+2
+2-3(2025) 임베디드 리눅스 프로그래밍
+국
+국어(조) 2-3
+2
+2024 소마고 통합사회 1-3
+2
+2024 영어과 행사 안내
+1
+1-3 수학
+2
+2024 실용국어 1-3
+2
+2024 디자인 일반 1-3
+피
+피지컬 컴퓨팅 시스템(1학년 3반)
+2
+2024학년도 성공적인 직업생활
+2
+2024 Practical 1-3
+보관처리된 수업
+설정
+http 서버 파일들
+http 서버 파일들
+이동술
+•
+오전 11:09
+config.txt
+텍스트
+index.html
+HTML
+style.css
+CSS
+success.html
+HTML
+수업 댓글
+수업 댓글 추가...
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>ESP32S3 WiFi Manager</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="topnav">
+        <h1>ESP32S3 WiFi Manager</h1>
+    </div>
+    <div class="content">
+        <div class="card-grid">
+            <div class="card">
+                <p class="device-id"><span id="deviceId" class="device-id-value">loading...</span></p>
+                <form action="/" method="POST">
+                    <p>
+                        <label for="ssid">WiFi 이름 (SSID)</label>
+                        <input type="text" id="ssid" name="ssid" placeholder="WiFi 네트워크 이름을 입력하세요"><br>
+                        <label for="pass">WiFi 비밀번호</label>
+                        <input type="text" id="pass" name="pass" placeholder="WiFi 비밀번호를 입력하세요"><br>
+                        <input type="submit" value="설정 저장">
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="version">v1.00</div>
+    <script>
+        // 페이지 로드 시 장치 ID 가져오기
+        window.addEventListener('load', function() {
+            fetch('/device-id')
+                .then(response => {
+                    if (!response.ok) throw new Error('Not found');
+                    return response.text();
+                })
+                .then(deviceId => {
+                    document.getElementById('deviceId').textContent = deviceId;
+                })
+                .catch(error => {
+                    // 로컬 테스트 시 임의의 값 표시
+                    document.getElementById('deviceId').textContent = 'TEST01234567';
+                    console.warn('device-id API not found, using test value.');
+                });
+        });
+    </script>
+</body>
+
+</html>
+
+
+index.html
+index.html 표시 중입니다.
