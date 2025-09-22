@@ -55,7 +55,7 @@ void CaptivePortal::startAPMode() {
     
     // AP 모드로 전환
     WiFi.mode(WIFI_AP);
-    WiFi.softAP("ESP32S3 WiFi Setup", NULL);
+    WiFi.softAP("ESP32S3-250922", NULL);
     
     IPAddress IP = WiFi.softAPIP();
     Serial.print("AP IP address: ");
